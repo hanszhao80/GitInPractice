@@ -6,7 +6,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument('square', type=int, help='display a square of a'
                     'given number')
 parser.add_argument('-v', '--verbosity', help="increase output verbosity",
-                    type=int)
+                    type=int, choices=[0, 1, 2])
 args = parser.parse_args()
 answer = args.square ** 2
 if args.verbosity == 2:
